@@ -84,20 +84,20 @@
                 </table>
   
                 <h4 class="mb-3" id='info'>Your Information</h4>
-                <div class="row">
+                <div action="/checkout" method=["POST"] class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">First name</label>
-                        <input type="text" class="form-control" name="first_name" placeholder="" value="">
+                        <input name="first_name" type="text" class="form-control" name="first_name" placeholder="" value="">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Last name</label>
-                        <input type="text" class="form-control" name="last_name" placeholder="" value="">
+                        <input name="last_name" type="text" class="form-control" name="last_name" placeholder="" value="">
                     </div>
                 </div>
   
                 <div class="mb-3">
                     <label for="email">Your Student ID <span class="text-muted">(Optional)</span></label>
-                    <input type="text" class="form-control" name="student_id" placeholder="123-456-7890">
+                    <input action="/checkout" method=["POST"] type="text" class="form-control" name="student_id" placeholder="123-456-7890">
                 </div>
               
                 <hr class="mb-4">
