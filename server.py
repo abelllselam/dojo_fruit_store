@@ -11,6 +11,7 @@ def index():
 @app.route("/checkout", methods=["POST"])
 def checkout():
     print(request.form)
+<<<<<<< HEAD
     form_info = request.form
     print("This form request is printing from the checkout route", form_info)
 
@@ -23,6 +24,13 @@ def checkout():
     print(f"Charging {form_info['first_name']} for {sum} fruits")
 
     return render_template("checkout.html", form_info=form_info)
+=======
+    form = request.form
+    result = int(form["strawberry"]) + int(form["apple"]) + int(form["raspberry"])
+
+    print(f"Charging {form['first_name']} for {result} fruits.")
+    return render_template("checkout.html", form=form)
+>>>>>>> e5015f45b15cf3c220c55459b14ad5e4c05f05a5
 
 
 @app.route("/fruits")
